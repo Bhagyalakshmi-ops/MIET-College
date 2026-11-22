@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANDAVA College</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #101c42;
+        }
+
+        /* Header */
+
+        header {
+            background-color: #f5f6fc;
+            color: navy;
+            padding: 10px 5%;
+            display: flex;
+            align-items: center;
+        }
+
+        header img {
+            width: 110px;
+            height: 85px;
+            margin-right: 25px;
+        }
+
+        header h1 {
+            font-family: Georgia;
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            margin-top: 5px;
+            font-family: Georgia;
+            font-style: italic;
+        }
+
+        /* Navigation */
+
+        nav {
+            background-color: #06458b;
+            padding: 17px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 65px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #078be5;
+            padding: 17px;
+        }
+
+        /* Student Registration Banner */
+
+        #Home {
+            background:
+                linear-gradient(to right, #092957 35%, transparent),
+                url("https://images.unsplash.com/photo-1562774053-701939374585?w=1400");
+
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 20px 5%;
+            height: 160px;
+        }
+
+        #Home h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        #Home span {
+            color: yellow;
+        }
+
+        #Home p {
+            font-family: Georgia;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        /* Common Section Heading */
+
+        section h2 {
+            border-left: 6px solid #0752a0;
+            padding-left: 12px;
+            font-size: 28px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        section {
+            padding: 22px 5%;
+        }
+
+        /* About Section */
+
+        /* About Section */
+
+        #About {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        #About div {
+            width: 50%;
+            line-height: 1.6;
+        }
+
+        #About img {
+            width: 45%;
+            height: 210px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        button {
+            background-color: #0759a9;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #003b78;
+        }
+
+        /* Courses Section */
+
+        /* Courses Section */
+
+        #course {
+            background-color: #e2edff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        #course div {
+            width: 45%;
+            border-right: 2px solid #5683c3;
+        }
+
+        #course ul {
+            padding-left: 30px;
+            line-height: 1.9;
+            font-weight: bold;
+        }
+
+        #course li::marker {
+            color: #06458b;
+        }
+
+        #course iframe {
+            width: 50%;
+            aspect-ratio: 16 / 9;
+            height: auto;
+            border: none;
+        }
+
+        /* Registration Section */
+
+        #registration {
+            display: flex;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .form-section {
+            width: 68%;
+        }
+
+        .form-box {
+            border: 1px solid lightgray;
+            padding: 15px;
+            border-radius: 9px;
+            box-shadow: 0 2px 5px #ddd;
+        }
+
+        form label {
+            display: inline-block;
+            width: 155px;
+            margin: 8px 0;
+            font-weight: bold;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="tel"],
+        form select {
+            width: 48%;
+            padding: 8px;
+            border: 1px solid #bbb;
+            border-radius: 6px;
+        }
+
+        form input[type="radio"],
+        form input[type="checkbox"] {
+            margin-left: 8px;
+        }
+
+        form button {
+            margin-left: 155px;
+            margin-top: 10px;
+        }
+
+        form .reset {
+            background-color: #7c8799;
+            margin-left: 5px;
+        }
+
+        /* Useful Links and Motto */
+
+        #links {
+            width: 30%;
+        }
+
+        .useful-links {
+            background-color: #eef3ff;
+            padding: 15px;
+            border-radius: 9px;
+        }
+
+        .useful-links a {
+            display: block;
+            color: #06458b;
+            text-decoration: none;
+            margin: 13px;
+        }
+
+        .motto {
+            margin-top: 20px;
+        }
+
+        .motto p {
+            background-color: #dce8ff;
+            padding: 18px;
+            text-align: center;
+            border-radius: 8px;
+            font-family: Georgia;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 17px;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+
+        footer {
+            background-color: #09284e;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 5%;
+        }
+
+        footer div {
+            width: 33%;
+            padding-left: 25px;
+            border-right: 2px solid white;
+        }
+
+        footer div:last-child {
+            border: none;
+        }
+
+        footer h3 {
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            line-height: 1.5;
+        }
+
+        /* Social Media Symbols */
+
+        .social {
+            display: inline-block;
+            background-color: white;
+            color: #09284e;
+            width: 33px;
+            height: 33px;
+            line-height: 33px;
+            text-align: center;
+            border-radius: 50%;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 17px;
+            margin: 5px;
+        }
+
+        /* Copyright */
+
+        .copyright {
+            background-color: #071e3d;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Mobile View */
+
+        @media (max-width: 768px) {
+
+            header,
+            #About,
+            #course,
+            #registration,
+            footer {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 10px;
+            }
+
+            #About div,
+            #About img,
+            #course div,
+            #course iframe,
+            .form-section,
+            #links {
+                width: 100%;
+            }
+
+            #course div {
+                border-right: none;
+            }
+
+            #course iframe {
+                margin-top: 15px;
+            }
+
+            form label {
+                width: 100%;
+            }
+
+            form input[type="text"],
+            form input[type="email"],
+            form input[type="tel"],
+            form select {
+                width: 90%;
+            }
+
+            form button {
+                margin-left: 0;
+            }
+
+            footer div {
+                width: 100%;
+                border: none;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <img src="data:image/jpeg;base64,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" alt="MANDAVA College Logo">
+
+        <div>
+            <h1>Mandava Institute of Engineering & Technology </h1>
+            <p>Learn . Grow . Achieve</p>
+        </div>
+
+        <p style="margin-left: auto;">
+            Build Your Bright Future...
+        </p>
+
+    </header>
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <a href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#course">Courses</a>
+        <a href="#registration">Registration</a>
+
+    </nav>
+
+    <main>
+
+        <!-- Home Section -->
+
+        <section id="Home">
+
+            <h1>
+                Student Registration <br>
+                <span>& Profile</span>
+            </h1>
+
+            <p>Your Journey Towards a Better Future Starts Here...</p>
+
+        </section>
+
+        <!-- About Section -->
+
+        <section id="About">
+
+            <div>
+
+                <h2>About Us</h2>
+
+                <p>
+                    Mandava Institute of Engineering & Technology 
+                    (Autonomous) is a private engineering institution
+                    located in Jaggayapeta, vijayawada,
+                    Andhra Pradesh.
+
+                    Established in 2007, the college provides
+                    <b>quality education and builds skilled professionals</b>
+                    for a smarter tomorrow.
+                </p>
+
+                <button>Learn More →</button>
+
+            </div>
+
+            <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QzDSo4cha6cYkiLjPzdpcuEiN8Qsye63wIhlrztLwRIK5uN3BnPkT0nnqbS6mjAeKj3opcgYZpo0U58gl8l3GLdKBy1_gEzZbTmPfu1rWnP9Uk9DnirgYOZnHDfIpGEVWhIw1Jgg=s1360-w1360-h1020-rw"
+                alt="College Building">
+
+        </section>
+
+        <!-- Courses Section -->
+
+        <section id="course">
+
+            <div>
+
+                <h2>Our Courses</h2>
+
+                <ul>
+                    <li>Computer Science and Engineering</li>
+                    <li>Electronics and Communication Engineering</li>
+                    <li>Electrical and Electronics Engineering</li>
+                    <li>Mechanical Engineering</li>
+                    <li>Information Technology</li>
+                </ul>
+
+            </div>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/o2OvhB9LWHI?si=LxDvwgs7kPFS5SxQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        </section>
+
+        <!-- Registration Section -->
+
+        <section id="registration">
+
+            <div class="form-section">
+
+                <h2>Student Registration</h2>
+
+                <div class="form-box">
+
+                    <form>
+
+                        <label>Student Name :</label>
+                        <input type="text" placeholder="Enter your name">
+                        <br>
+
+                        <label>Email :</label>
+                        <input type="email" placeholder="Enter your email">
+                        <br>
+
+                        <label>Mobile Number :</label>
+                        <input type="tel" placeholder="Enter your mobile number">
+                        <br>
+
+                        <label>Gender :</label>
+
+                        <input type="radio" name="gender"> Male
+                        <input type="radio" name="gender"> Female
+                        <input type="radio" name="gender"> Other
+                        <br>
+
+                        <label>Skills :</label>
+
+                        <input type="checkbox"> Java
+                        <input type="checkbox"> Python
+                        <input type="checkbox"> Web Development
+                        <input type="checkbox"> Data Science
+                        <br>
+
+                        <label>Graduation Year :</label>
+
+                        <select>
+                            <option>Select Year</option>
+                            <option>2026</option>
+                            <option>2027</option>
+                            <option>2028</option>
+                            <option>2029</option>
+                            <option>2030</option>
+                        </select>
+                        <br>
+
+                        <button type="submit">Submit</button>
+                        <button type="reset" class="reset">Reset</button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <!-- Useful Links -->
+
+            <div id="links">
+
+                <div class="useful-links">
+
+                    <h2>Useful Links</h2>
+
+                    <a href="https://mandava.ac.in/">
+                        🔗 Official Website
+                    </a>
+
+                    <a href="https://mandava.ac.in/">
+                        🔗 Student Portal
+                    </a>
+
+                    <a href="https://mandava.ac.in/">
+                        🔗 Online Courses
+                    </a>
+
+                    <a href="https://mandava.ac.in/">
+                        🔗 Contact Us
+                    </a>
+
+                </div>
+
+                <!-- Our Motto -->
+
+                <div class="motto">
+
+                    <h2>Our Motto</h2>
+
+                    <p>
+                        "Education is the key <br>
+                        to unlock a brighter future."
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div>
+
+            <h3>📍 Our Address</h3>
+
+            <p>
+                Mandava Institute of Engineering & Technology ,
+                <br>
+                jaggayapeta, Vijayawada,
+                <br>
+                Andhra Pradesh, India.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>✉ Contact Us</h3>
+
+            <p>
+                Mandava Institute of Engineering & Technology
+                <br>
+                Vijayawada, Andhra Pradesh
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Follow Us</h3>
+
+            <a href="#" class="social" title="Facebook">f</a>
+
+            <a href="#" class="social" title="YouTube">▶</a>
+
+            <a href="#" class="social" title="LinkedIn">in</a>
+
+            <a href="#" class="social" title="Instagram">◎</a>
+
+        </div>
+
+    </footer>
+
+    <!-- Copyright -->
+
+    <div class="copyright">
+
+        © 2026 Mandava Institute of Engineering & Technology. All Rights Reserved.
+
+    </div>
+
+</body>
+
+</html>
